@@ -30,3 +30,8 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Semantic Release
+        run: yarn semantic-release
+        env:
+          CI: true

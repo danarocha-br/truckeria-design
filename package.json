@@ -21,14 +21,16 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": ">=16"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "tsdx lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "prettier": {
@@ -50,8 +52,20 @@
       "limit": "10 KB"
     }
   ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ]
+    ],
   "devDependencies": {
     "@babel/core": "^7.18.6",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-info": "^5.3.21",
@@ -71,6 +85,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
+    "semantic-release": "^19.0.3",
     "size-limit": "^7.0.8",
     "storybook-addon-designs": "^6.3.1",
     "storybook-mobile": "^1.0.0",
