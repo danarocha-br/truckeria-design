@@ -19,7 +19,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "generate": "yarn plop --plopfile ./generators/plopfile.js"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -62,6 +63,7 @@
     "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
     "husky": "^8.0.1",
+    "plop": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
