@@ -6,7 +6,9 @@ module.exports = {
     '@storybook/theming',
     'storybook-addon-designs',
     'storybook-mobile',
-    '@storybook/addon-viewport'
+    '@storybook/addon-viewport',
+    'storybook-addon-docs-tabs',
+    'multiple-themes-stitches'
   ],
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {

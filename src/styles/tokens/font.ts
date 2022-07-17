@@ -5,7 +5,7 @@ export default {
   },
 
   size: {
-    tiny: '0.66rem',
+    tiny: '0.687rem',
     xs: '0.77rem',
     sm: '0.8rem',
     base: '1.1rem',

@@ -26,7 +26,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  plugins: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
       'classic',
@@ -105,6 +105,9 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      liveCodeBlock: {
+        playgroundPosition: 'bottom',
       },
     }),
 };

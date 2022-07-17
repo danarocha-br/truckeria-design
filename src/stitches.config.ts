@@ -27,9 +27,6 @@ export const {
 
       shadowLight: 'hsl(206 22% 7% / 35%)',
       shadowDark: 'hsl(206 22% 7% / 20%)',
-
-      // Dark theme
-      ...dark,
     },
     fonts: {
       sans: font.family.sans,
@@ -227,8 +224,13 @@ export type CSS = Stitches.CSS<typeof config>;
 
 export const lightTheme = createTheme('light-theme', {
   colors: {
-    // Light theme
     ...light,
+  },
+});
+
+export const darkTheme = createTheme('dark-theme', {
+  colors: {
+    ...dark,
   },
 });
 

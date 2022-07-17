@@ -38,7 +38,7 @@ export const Text = styled('span', {
     },
 
     color: {
-      default: {
+      primary: {
         color: '$text-default',
       },
       subdued: {

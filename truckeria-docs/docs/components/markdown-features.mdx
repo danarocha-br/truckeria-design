@@ -1,0 +1,91 @@
+---
+sidebar_position: 2
+---
+
+# Flex
+
+A primitive component that can be used to build flexbox based elements and layouts.
+
+
+### About Flex
+
+Flex utilizes a simplified flexbox API that allows you more efficient ways to layout, align, and distribute space among elements in a container. The Flex API helps take the confusion out of using flexbox CSS properties, by giving you simple methods to change properties like flex, flex-direction, flex-wrap, and so on.
+
+
+### Accessibility
+
+The Flex component is an all purpose component. By default, it has no accessibility concerns. If you use the Flex as a custom element, it is up to you to manage the resulting accessibility implications.
+
+
+**Result:** Let's see how to [Create a page](./create-a-page.md).
+
+### Examples
+
+```jsx live
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+```
+
+## MDX and React Components
+
+[MDX](https://mdxjs.com/) can make your documentation more **interactive** and allows using any **React components inside Markdown**:
+
+```jsx
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '20px',
+      color: '#fff',
+      padding: '10px',
+      cursor: 'pointer',
+    }}
+    onClick={() => {
+      alert(`You clicked the color ${color} with label ${children}`)
+    }}>
+    {children}
+  </span>
+);
+
+This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+
+This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+```
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '20px',
+      color: '#fff',
+      padding: '10px',
+      cursor: 'pointer',
+    }}
+    onClick={() => {
+      alert(`You clicked the color ${color} with label ${children}`);
+    }}>
+    {children}
+  </span>
+);
+
+This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+
+This is <Highlight color="#1877F2">Facebook blue</Highlight> !

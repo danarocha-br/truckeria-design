@@ -3,9 +3,11 @@ import { addDecorator, addParameters } from '@storybook/react';
 import { withDesign } from 'storybook-addon-designs';
 import { themes } from '@storybook/theming';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
+import { TabContainer } from 'storybook-addon-docs-tabs';
 
 import 'styles/reset.css';
-import { lightTheme } from "../src/stitches.config";
+import { lightTheme, darkTheme } from '../src/stitches.config';
 
 addDecorator(withDesign());
 
@@ -20,16 +22,29 @@ export const parameters = {
   },
   docs: {
     theme: themes.dark,
+    container: ({ children, context }) => (
+      <DocsContainer context={context}>
+        <TabContainer context={context}>{children}</TabContainer>
+      </DocsContainer>
+    ),
   },
   options: {
     storySort: {
-      order: ['Intro', 'Foundation', 'Primitives', 'Components', 'Navigation', 'Form Controls', 'Templates'],
+      order: [
+        'Intro',
+        'Foundation',
+        'Primitives',
+        'Components',
+        'Navigation',
+        'Form Controls',
+        'Templates',
+      ],
     },
   },
 
   backgrounds: {
     default: 'dark',
-    layout: 'fullscreen',
+    layout: 'centered',
     values: [
       {
         name: 'light',
@@ -41,26 +56,19 @@ export const parameters = {
       },
     ],
   },
+
+  multipleThemesStitches: {
+    values: [
+      {
+        name: 'Light',
+        theme: lightTheme,
+      },
+      {
+        name: 'Dark',
+        theme: darkTheme,
+      },
+    ],
+  },
 };
 
 
-const withThemeProvider=(Story,context)=>{
-  const [isLightTheme, setLightTheme] = useState(false);
-
-  const handleTheme = () => {
-    setLightTheme(!isLightTheme)
-
-  }
-
-  return (
-    <div className={ isLightTheme ? lightTheme : undefined} css={{ width: '100%', height: '100%'}}>
-      {/* <Button size='sm' variant='icon' color='transparent' icon={isLightTheme ? <HiMoon /> : <HiSun /> } onClick={handleTheme} css={{
-        position: 'absolute',
-        right: 0
-      }} /> */}
-      <Story {...context} />
-    </div>
-  )
-}
-
-export const decorators = [withThemeProvider];
