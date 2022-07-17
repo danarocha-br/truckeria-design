@@ -1,6 +1,5 @@
-const { createStitches } = require('@stitches/react');
+import { createStitches  } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
-export const { VariantProps } = require('@stitches/react');
 
 import { colors, font, spacing, radii } from './styles/tokens';
 import { dark, light } from './styles/themes';
