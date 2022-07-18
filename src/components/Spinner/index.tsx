@@ -10,9 +10,10 @@ export const Spinner = ({
   color = 'primary',
   size = 'xs',
   variant = 'component',
+  ...props
 }: SpinnerProps) =>
   variant === 'component' ? (
-    <S.Container color={color} size={size} />
+    <S.Container color={color} size={size} {...props} />
   ) : (
     <S.ContainerPage>
       <span />

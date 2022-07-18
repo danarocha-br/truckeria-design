@@ -3,6 +3,7 @@ import type * as Stitches from '@stitches/react';
 import { colors, font, spacing, radii } from './styles/tokens';
 import { dark, light } from './styles/themes';
 const { createStitches } = require('@stitches/react');
+// import { createStitches }  from '@stitches/react';
 
 export const {
   styled,

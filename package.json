@@ -39,17 +39,17 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@truckeria/design",
+  "name": "truckeria-design",
   "author": "Dana Rocha",
   "module": "dist/truckeria-design.esm.js",
   "size-limit": [
     {
       "path": "dist/truckeria-design.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "60 KB"
     },
     {
       "path": "dist/truckeria-design.esm.js",
-      "limit": "10 KB"
+      "limit": "60 KB"
     }
   ],
   "plugins": [
