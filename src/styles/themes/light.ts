@@ -51,24 +51,24 @@ export default {
 
   'action-primary-default': colors.brand,
   'action-primary-subdued': colors.yellow[500],
-  'action-primary-hover': darken(0.1, colors.brand),
-  'action-primary-pressed': darken(0.2, colors.brand),
-  'action-primary-disabled': transparentize(
-    0.25,
-    desaturate(0.93, colors.brand)
-  ),
+  'action-primary-hover': darken(0.05, colors.brand),
+  'action-primary-pressed': darken(0.1, colors.brand),
+  'action-primary-disabled': transparentize(0.3,desaturate(0.6, colors.brand)),
+  'action-primary-transparent': transparentize(0.5, colors.brand),
 
-  'action-succsess-default': colors.green[500],
-  'action-succsess-subdued': colors.green[100],
-  'action-succsess-hover': darken(0.1, colors.green[500]),
-  'action-succsess-pressed': darken(0.2, colors.green[500]),
-  'action-succsess-disabled': desaturate(0.4, colors.green[500]),
+  'action-success-default': colors.green[500],
+  'action-success-subdued': colors.green[100],
+  'action-success-hover': darken(0.05, colors.green[500]),
+  'action-success-pressed': darken(0.1, colors.green[500]),
+  'action-success-disabled': transparentize(0.4, desaturate(0.4, colors.green[500])),
+  'action-success-transparent': transparentize(0.7, colors.green[500]),
 
   'action-transparent-default': 'transparent',
   'action-transparent-subdued': transparentize(0.1, colors.neutral[200]),
-  'action-transparent-hover': transparentize(0.95, colors.neutral[200]),
-  'action-transparent-pressed': darken(0.9, colors.neutral[200]),
+  'action-transparent-hover': transparentize(0.89, colors.neutral[200]),
+  'action-transparent-pressed': transparentize(0.8, colors.neutral[200]),
   'action-transparent-disabled': transparentize(0.9, colors.neutral[200]),
+  'action-transparent-transparent': transparentize(0.9, colors.neutral[200]),
 
   'interactive-default': darken(0.2, colors.yellow[300]),
   'interactive-subdued': colors.yellow[500],

@@ -1,4 +1,4 @@
-import { darken, desaturate, transparentize } from 'polished';
+import { darken, desaturate, transparentize,  } from 'polished';
 
 import * as colors from '../tokens/colors';
 
@@ -47,21 +47,24 @@ export default {
 
   'action-primary-default': colors.brand,
   'action-primary-subdued': colors.yellow[500],
-  'action-primary-hover': darken(0.1, colors.brand),
-  'action-primary-pressed': darken(0.2, colors.brand),
-  'action-primary-disabled': desaturate(0.8, colors.brand),
+  'action-primary-hover': darken(0.05, colors.brand),
+  'action-primary-pressed': darken(0.1, colors.brand),
+  'action-primary-disabled': transparentize(0.4, desaturate(0.8, colors.brand)),
+  'action-primary-transparent': transparentize(0.7, colors.brand),
 
   'action-success-default': colors.green[500],
   'action-success-subdued': colors.green[100],
-  'action-success-hover': darken(0.1, colors.green[500]),
-  'action-success-pressed': darken(0.7, colors.green[500]),
-  'action-success-disabled': desaturate(0.8, colors.green[500]),
+  'action-success-hover': darken(0.06, colors.green[500]),
+  'action-success-pressed': darken(0.12, colors.green[500]),
+  'action-success-disabled': transparentize(0.5, desaturate(.3, colors.green[500])),
+  'action-success-transparent': transparentize(0.7, colors.green[500]),
 
   'action-transparent-default': 'transparent',
   'action-transparent-subdued': transparentize(0.1, colors.neutral[200]),
-  'action-transparent-hover': transparentize(0.95, colors.neutral[200]),
-  'action-transparent-pressed': darken(0.9, colors.neutral[200]),
-  'action-transparent-disabled': transparentize(0.9, colors.neutral[200]),
+  'action-transparent-hover': transparentize(0.97, colors.neutral[200]),
+  'action-transparent-pressed': transparentize(0.99, colors.neutral[200]),
+  'action-transparent-disabled': transparentize(0.95, colors.neutral[200]),
+  'action-transparent-transparent': transparentize(0.9, colors.neutral[200]),
 
   'interactive-default': colors.yellow[300],
   'interactive-subdued': colors.yellow[500],

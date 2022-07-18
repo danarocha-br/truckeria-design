@@ -235,6 +235,8 @@ export const darkTheme = createTheme('dark-theme', {
 });
 
 export const globalStyles = globalCss({
+  '@import': 'url("https://use.typekit.net/jll4squ.css")',
+
   '*, *::before, *::after': {
     boxSizing: 'border-box',
     '-webkit-font-smoothing': 'antialiased',

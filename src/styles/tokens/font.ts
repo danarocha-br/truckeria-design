@@ -1,3 +1,5 @@
+import { convertRemToPixels } from "../../utils/convertRemToPixels";
+
 export default {
   family: {
     sans:
@@ -5,14 +7,14 @@ export default {
   },
 
   size: {
-    tiny: '0.687rem',
-    xs: '0.77rem',
-    sm: '0.8rem',
-    base: '1.1rem',
-    lg: '1.25rem',
-    xl: '1.5rem',
-    '2xl': '2rem',
-    '3xl': '2.75rem',
+    tiny: convertRemToPixels(12),
+    xs: convertRemToPixels(14),
+    sm: convertRemToPixels(15),
+    base: convertRemToPixels(17),
+    lg: convertRemToPixels(20),
+    xl: convertRemToPixels(26),
+    '2xl': convertRemToPixels(32),
+    '3xl': convertRemToPixels(45),
   },
 
   weight: {
