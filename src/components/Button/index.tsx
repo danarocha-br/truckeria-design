@@ -1,4 +1,3 @@
-import { VariantProps } from '@stitches/react';
 import React from 'react';
 
 import { Spinner } from '../Spinner';
@@ -9,11 +8,13 @@ export type ButtonProps = {
   label?: string;
   ariaLabel?: string;
   icon?: keyof typeof iconPath;
+  variant?: 'primary' | 'flat' | 'success' | 'icon';
+  size?: 'sm' | 'flat' | 'md' | 'lg';
+  fullWidth?: boolean;
   loading?: boolean;
   disabled?: boolean;
   onClick?: () => (event: React.MouseEvent<HTMLButtonElement>) => void;
-} & React.ButtonHTMLAttributes<HTMLButtonElement> &
-  Omit<VariantProps<typeof S.Container>, 'hasIcon'>;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button = ({
   label,
