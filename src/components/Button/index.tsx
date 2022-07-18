@@ -1,7 +1,8 @@
 import { VariantProps } from '@stitches/react';
 import React from 'react';
-import { Icon, iconPath } from '../Icon';
 
+import { Spinner } from '../Spinner';
+import { Icon, iconPath } from '../Icon';
 import * as S from './styles';
 
 export type ButtonProps = {
@@ -37,8 +38,12 @@ export const Button = ({
     onClick={onClick}
     {...props}
   >
-    {!!icon && <Icon name={icon} color='current' />}
+    {!!icon && <Icon name={icon} color="current" />}
     {variant !== 'icon' && label}
-    {loading && variant !== 'icon' && '...'}
+    {loading && variant !== 'icon' && (
+      <S.LoadingWrapper>
+        <Spinner size="xs" color="onInteractive" />
+      </S.LoadingWrapper>
+    )}
   </S.Container>
 );

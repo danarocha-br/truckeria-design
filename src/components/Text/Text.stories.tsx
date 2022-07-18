@@ -55,7 +55,6 @@ export default ({
         'lighter',
         'success',
         'danger',
-        ,
         'warning',
       ],
       control: {

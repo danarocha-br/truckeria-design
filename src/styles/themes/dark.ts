@@ -1,4 +1,4 @@
-import { darken, desaturate, transparentize,  } from 'polished';
+import { darken, desaturate, transparentize } from 'polished';
 
 import * as colors from '../tokens/colors';
 
@@ -56,7 +56,10 @@ export default {
   'action-success-subdued': colors.green[100],
   'action-success-hover': darken(0.06, colors.green[500]),
   'action-success-pressed': darken(0.12, colors.green[500]),
-  'action-success-disabled': transparentize(0.5, desaturate(.3, colors.green[500])),
+  'action-success-disabled': transparentize(
+    0.5,
+    desaturate(0.3, colors.green[500])
+  ),
   'action-success-transparent': transparentize(0.7, colors.green[500]),
 
   'action-transparent-default': 'transparent',

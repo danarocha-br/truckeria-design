@@ -1,6 +1,6 @@
 import { styled } from '../../stitches.config';
 
-export type FlexProps = React.ComponentProps<typeof Flex>
+export type FlexProps = React.ComponentProps<typeof Flex>;
 
 export const Flex = styled('div', {
   boxSizing: 'border-box',

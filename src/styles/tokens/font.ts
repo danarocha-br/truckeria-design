@@ -1,4 +1,4 @@
-import { convertRemToPixels } from "../../utils/convertRemToPixels";
+import { convertRemToPixels } from '../../utils/convertRemToPixels';
 
 export default {
   family: {

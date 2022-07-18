@@ -20,6 +20,10 @@ export default ({
     ariaLabel: 'I am a button',
     size: 'md',
     variant: 'primary',
+    fullWidth: false,
+    loading: false,
+    disabled: false,
+    onClick: () => console.log('clicked'),
   },
   argTypes: {
     label: {
@@ -55,8 +59,8 @@ export default ({
         category: 'Modifiers',
       },
       control: {
-        type: 'select'
-      }
+        type: 'select',
+      },
     },
     loading: {
       table: {

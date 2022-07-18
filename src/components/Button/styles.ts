@@ -1,6 +1,7 @@
 import { styled } from '../../stitches.config';
+import { Button } from 'reakit/Button';
 
-export const Container = styled('button', {
+export const Container = styled(Button, {
   all: 'unset',
 
   color: '$text-onInteractive',
@@ -21,6 +22,7 @@ export const Container = styled('button', {
 
   '&:disabled': {
     cursor: 'not-allowed',
+    opacity: 0.7,
   },
 
   '&:active': {
@@ -155,7 +157,9 @@ export const Container = styled('button', {
     },
 
     loading: {
-      true: {},
+      true: {
+        opacity: 0.7,
+      },
     },
   },
 
@@ -197,4 +201,10 @@ export const Container = styled('button', {
     hasIcon: false,
     loading: false,
   },
+});
+
+export const LoadingWrapper = styled('i', {
+  ml: '$6',
+  position: 'absolute',
+  right: '$4',
 });

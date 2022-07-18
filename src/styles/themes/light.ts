@@ -53,14 +53,17 @@ export default {
   'action-primary-subdued': colors.yellow[500],
   'action-primary-hover': darken(0.05, colors.brand),
   'action-primary-pressed': darken(0.1, colors.brand),
-  'action-primary-disabled': transparentize(0.3,desaturate(0.6, colors.brand)),
+  'action-primary-disabled': transparentize(0.3, desaturate(0.6, colors.brand)),
   'action-primary-transparent': transparentize(0.5, colors.brand),
 
   'action-success-default': colors.green[500],
   'action-success-subdued': colors.green[100],
   'action-success-hover': darken(0.05, colors.green[500]),
   'action-success-pressed': darken(0.1, colors.green[500]),
-  'action-success-disabled': transparentize(0.4, desaturate(0.4, colors.green[500])),
+  'action-success-disabled': transparentize(
+    0.4,
+    desaturate(0.4, colors.green[500])
+  ),
   'action-success-transparent': transparentize(0.7, colors.green[500]),
 
   'action-transparent-default': 'transparent',

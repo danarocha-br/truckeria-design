@@ -21,7 +21,7 @@ export default ({
     name: 'plus',
     color: 'subdued',
     size: 'base',
-    label: 'Add'
+    label: 'Add',
   },
   argTypes: {
     name: {

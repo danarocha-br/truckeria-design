@@ -1,6 +1,6 @@
 import { styled } from '../../stitches.config';
 
-export type GridProps =  React.ComponentProps<typeof Grid>;
+export type GridProps = React.ComponentProps<typeof Grid>;
 
 export const Grid = styled('div', {
   boxSizing: 'border-box',
