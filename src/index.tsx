@@ -5,6 +5,7 @@ export * from './components/Text';
 export * from './components/Icon';
 
 export * from './components/Button';
+export * from './components/FormControl';
 export * from './components/FormError';
 export * from './components/Logo';
 export * from './components/Spinner';

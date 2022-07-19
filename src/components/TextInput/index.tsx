@@ -57,7 +57,7 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
       }
     }, [setFocus, hasValue]);
 
-    const areErrorsEmpty = Object.keys(errors).length === 0;
+    const areErrorsEmpty = !!errors && Object.keys(errors).length === 0;
 
     return (
       <Flex direction="column" fullWidth>
