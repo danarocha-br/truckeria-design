@@ -1,10 +1,9 @@
 import React from 'react';
-import { SubmitHandler } from 'react-hook-form';
-import { Flex } from 'truckeria-design';
+import { Flex } from '../Flex';
 
 export type FormControlProps = {
   children: React.ReactNode;
-  onSubmit: SubmitHandler<any>;
+  onSubmit: (data: any, event?: React.BaseSyntheticEvent) => any | Promise<any>
 };
 
 export const FormControl = ({
