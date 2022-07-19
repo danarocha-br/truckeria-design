@@ -2,8 +2,6 @@ import { styled } from '../../stitches.config';
 import { Button } from 'reakit/Button';
 
 export const Container = styled(Button, {
-  all: 'unset',
-
   color: '$text-onInteractive',
   fontWeight: '$semibold',
   whiteSpace: 'nowrap',
@@ -27,6 +25,10 @@ export const Container = styled(Button, {
 
   '&:active': {
     transform: 'scale(0.99)',
+  },
+
+  '&:focus': {
+    outline: 'none',
   },
 
   variants: {
@@ -122,24 +124,24 @@ export const Container = styled(Button, {
       sm: {
         fontSize: '$sm',
         borderRadius: '$xs',
-        h: '$8',
+        h: '$10',
         py: '$2',
         px: '$8',
       },
 
       md: {
-        fontSize: '$base',
+        fontSize: '1.14rem',
         borderRadius: '$xs',
-        h: '$9',
-        py: '$4',
+        h: '$11',
+        py: '$5',
         px: '$10',
       },
 
       lg: {
         fontSize: '$lg',
         lineHeight: '$6',
-        borderRadius: '$sm',
-        h: '$10',
+        borderRadius: '$xs',
+        h: '$12',
         py: '$5',
         px: '$11',
       },
@@ -168,7 +170,8 @@ export const Container = styled(Button, {
       size: 'sm',
       variant: 'icon',
       css: {
-        h: '$5',
+        w: 'unset',
+        h: 'unset',
         px: '$2',
       },
     },
@@ -177,8 +180,8 @@ export const Container = styled(Button, {
       size: 'md',
       variant: 'icon',
       css: {
-        h: '$6',
-        w: '$6',
+        w: 'unset',
+        h: 'unset',
         px: '$4',
       },
     },
@@ -187,8 +190,8 @@ export const Container = styled(Button, {
       size: 'lg',
       variant: 'icon',
       css: {
-        h: '$7',
-        w: '$7',
+        w: 'unset',
+        h: 'unset',
         px: '$5',
       },
     },

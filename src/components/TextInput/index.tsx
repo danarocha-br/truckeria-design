@@ -77,11 +77,11 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
             hasFocus={hasFocus}
             hasError={!!errors && !areErrorsEmpty ? true : false}
             name={name}
+            {...props}
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
             disabled={disabled || loading}
             readOnly={readOnly}
-            {...props}
           />
 
           <S.Label
