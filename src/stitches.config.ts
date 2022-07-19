@@ -2,8 +2,8 @@ import type * as Stitches from '@stitches/react';
 
 import { colors, font, spacing, radii } from './styles/tokens';
 import { dark, light } from './styles/themes';
-const { createStitches } = require('@stitches/react');
-// import { createStitches }  from '@stitches/react';
+// const { createStitches } = require('@stitches/react');
+import { createStitches }  from '@stitches/react';
 
 export const {
   styled,
@@ -25,6 +25,8 @@ export const {
       ...colors.yellow,
       ...colors.red,
       ...colors.neutral,
+
+      ...dark,
 
       shadowLight: 'hsl(206 22% 7% / 35%)',
       shadowDark: 'hsl(206 22% 7% / 20%)',
