@@ -3,11 +3,15 @@ import React from 'react';
 import * as S from './styles';
 
 export type LogoProps = {
-  size: 'sm' | 'md';
-  variant: 'default' | 'symbol';
-};
+  size?: 'sm' | 'md';
+  variant?: 'default' | 'symbol';
+} & React.ComponentProps<typeof S.Svg>;
 
-export const Logo = ({ size = 'sm', variant = 'default' }: LogoProps) => {
+export const Logo = ({
+  size = 'sm',
+  variant = 'default',
+  ...props
+}: LogoProps) => {
   return (
     <>
       {variant === 'default' && (
@@ -17,6 +21,7 @@ export const Logo = ({ size = 'sm', variant = 'default' }: LogoProps) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           size={size}
+          {...props}
         >
           <S.MainColor
             fillRule="evenodd"
