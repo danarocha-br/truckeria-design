@@ -56,11 +56,7 @@ export const Container = styled('div', {
   },
 
   variants: {
-    hasFocus: {
-      true: {
-        borderColor: '$form-focus',
-      },
-    },
+
     hasError: {
       true: {
         borderColor: '$form-error',
@@ -123,7 +119,6 @@ export const Container = styled('div', {
   ],
 
   defaultVariants: {
-    hasFocus: false,
     hasError: false,
     readOnly: false,
     isDisabled: false,
