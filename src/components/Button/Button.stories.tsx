@@ -114,13 +114,13 @@ export const Default = Template.bind({});
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  icon: 'edit',
+  icon: 'pencil',
 };
 
 export const IconOnly: Story<ButtonProps> = args => (
   <Flex align="center" justify="center" gap={6} css={{ p: '$6' }}>
-    <Button {...args} variant="icon" icon="edit" />
-    <Button {...args} variant="icon" icon="edit" disabled />
-    <Button {...args} variant="icon" icon="edit" loading />
+    <Button {...args} variant="icon" icon="pencil" />
+    <Button {...args} variant="icon" icon="pencil" disabled />
+    <Button {...args} variant="icon" icon="pencil" loading />
   </Flex>
 );

@@ -35,6 +35,12 @@ export default {
   'surface-warning-pressed': darken(0.2, colors.yellow[500]),
   'surface-warning-disabled': desaturate(0.5, colors.yellow[500]),
 
+  'surface-info-default': colors.blue[500],
+  'surface-info-subdued': colors.blue[100],
+  'surface-info-hover': darken(0.1, colors.blue[500]),
+  'surface-info-pressed': darken(0.2, colors.blue[500]),
+  'surface-info-disabled': desaturate(0.5, colors.blue[500]),
+
   'loading-default': colors.neutral[700],
   'loading-subdued': colors.neutral[500],
 
@@ -83,4 +89,5 @@ export default {
   'text-success': colors.green[500],
   'text-onBrand': colors.yellow[300],
   'text-onInteractive': colors.white,
+  'text-contrast': colors.neutral[900],
 };

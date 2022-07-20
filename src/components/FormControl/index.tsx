@@ -3,7 +3,7 @@ import { Flex } from '../Flex';
 
 export type FormControlProps = {
   children: React.ReactNode;
-  onSubmit: (data: any, event?: React.BaseSyntheticEvent) => any | Promise<any>
+  onSubmit: (data: any, event?: React.BaseSyntheticEvent) => any | Promise<any>;
 };
 
 export const FormControl = ({

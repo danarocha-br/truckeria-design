@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Link, LinkProps  } from '.';
+import { Link, LinkProps } from '.';
 
 export default {
   title: 'Navigation/Link',
@@ -11,19 +11,18 @@ export default {
     status: 'stable', // beta| deprecated | review | stable,
     design: {
       type: 'figma',
-      url:
-        '',
+      url: '',
     },
   },
   args: {
     as: '',
     label: "I don't have an account",
     href: '/',
-    variant: 'standalone'
-  }
+    variant: 'standalone',
+  },
 } as Meta;
 
-const Template: Story<LinkProps> = (args) => <Link {...args} />;
+const Template: Story<LinkProps> = args => <Link {...args} />;
 
 export const Standalone = Template.bind({});
 export const Inline = Template.bind({});

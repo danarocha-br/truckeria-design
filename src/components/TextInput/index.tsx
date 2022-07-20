@@ -51,7 +51,6 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
       setFocus(true);
     }, [setFocus]);
 
-
     const handleInputBlur = useCallback(() => {
       if (!hasValue) {
         setFocus(false);

@@ -73,6 +73,12 @@ export default {
   'action-transparent-disabled': transparentize(0.9, colors.neutral[200]),
   'action-transparent-transparent': transparentize(0.9, colors.neutral[200]),
 
+  'surface-info-default': colors.blue[500],
+  'surface-info-subdued': colors.blue[100],
+  'surface-info-hover': darken(0.1, colors.blue[500]),
+  'surface-info-pressed': darken(0.2, colors.blue[500]),
+  'surface-info-disabled': desaturate(0.5, colors.blue[500]),
+
   'interactive-default': darken(0.2, colors.yellow[300]),
   'interactive-subdued': colors.yellow[500],
   'interactive-hover': colors.brand,
@@ -87,4 +93,5 @@ export default {
   'text-success': colors.green[500],
   'text-onBrand': darken(0.28, colors.yellow[300]),
   'text-onInteractive': colors.white,
+  'text-contrast': colors.neutral[900]
 };

@@ -1,6 +1,5 @@
 import { styled } from '../../stitches.config';
-import { Input as ReakitInput } from "reakit/Input";
-
+import { Input as ReakitInput } from 'reakit/Input';
 
 const inputBorder = {
   border: '8px solid',
@@ -58,7 +57,6 @@ export const Container = styled('div', {
   },
 
   variants: {
-
     hasError: {
       true: {
         borderColor: '$form-error',

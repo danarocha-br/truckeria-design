@@ -22,6 +22,7 @@ export const green = {
 export const blue = {
   500: 'hsla(179, 62%, 34%, 1)',
   300: 'hsla(179, 63%, 43%, 1)',
+  100: 'hsla(179, 63%, 80%, 1)',
 };
 
 export const neutral = {

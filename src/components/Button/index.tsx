@@ -1,19 +1,21 @@
 import React from 'react';
+import { CSS } from '@stitches/react';
 
 import { Spinner } from '../Spinner';
 import { Icon, iconPath } from '../Icon';
 import * as S from './styles';
+import { config } from '../../stitches.config';
 
 export type ButtonProps = {
   label?: string;
   ariaLabel?: string;
   icon?: keyof typeof iconPath;
   variant?: 'primary' | 'flat' | 'success' | 'icon';
-  size?: 'sm' | 'flat' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
   loading?: boolean;
   disabled?: boolean;
-  onClick?: () => (event: React.MouseEvent<HTMLButtonElement>) => void;
+  css?: CSS<typeof config>;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button = ({

@@ -1,6 +1,5 @@
 import { styled, keyframes } from '../../stitches.config';
-import { Clickable } from "reakit/Clickable";
-
+import { Clickable } from 'reakit/Clickable';
 
 const lineUp = keyframes({
   '0%': {
@@ -61,7 +60,6 @@ export const Anchor = styled(Clickable, {
       transform: 'scale(1.25)',
       transition: 'all cubic-bezier(0, 0, 0.2, 1) 700ms',
       animationDirection: 'alternate-reverse',
-
     },
   },
 });
