@@ -7,8 +7,10 @@ export * from './components/Icon';
 export * from './components/Button';
 export * from './components/FormControl';
 export * from './components/FormError';
+export * from "./components/Link";
 export * from './components/Logo';
 export * from './components/Spinner';
 export * from './components/TextInput';
+export * from './components/Toast'
 
 export * from './utils/convertRemToPixels';
