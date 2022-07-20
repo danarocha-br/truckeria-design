@@ -83,6 +83,7 @@ export const Toast = forwardRef(
                 size="sm"
                 label={actionLabel}
                 onClick={actionOnClick}
+                //@ts-ignore
                 css={{
                   px: '$2',
                   h: '$8',
