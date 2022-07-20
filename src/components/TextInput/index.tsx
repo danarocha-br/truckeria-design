@@ -63,7 +63,6 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
     return (
       <Flex direction="column" fullWidth>
         <S.Container
-          hasFocus={hasFocus}
           hasError={!!errors && !areErrorsEmpty ? true : false}
           isDisabled={disabled}
           isLoading={loading}

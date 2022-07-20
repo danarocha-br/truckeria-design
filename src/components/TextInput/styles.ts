@@ -1,4 +1,6 @@
 import { styled } from '../../stitches.config';
+import { Input as ReakitInput } from "reakit/Input";
+
 
 const inputBorder = {
   border: '8px solid',
@@ -110,7 +112,6 @@ export const Container = styled('div', {
 
   compoundVariants: [
     {
-      hasFocus: true,
       readOnly: true,
       css: {
         borderColor: '$form-default',
@@ -126,7 +127,7 @@ export const Container = styled('div', {
   },
 });
 
-export const Input = styled('input', {
+export const Input = styled(ReakitInput, {
   color: '$text-default',
   bg: '$transparent',
   border: 'none',
