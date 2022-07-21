@@ -23,6 +23,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
+      
+      - name: Install deps and build (with cache)
+        uses: comchangs/action-yarn@v0.1-beta
 
       - name: Lint
         run: yarn lint
