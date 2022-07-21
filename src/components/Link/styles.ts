@@ -37,12 +37,14 @@ export const Anchor = styled(Clickable, {
 
   '&:after, &:before': {
     content: '',
-    bg: '$brand',
+    bg: '$action-primary-default',
     d: 'inline-block',
     w: '$5',
-    h: '1px',
+    h: '1.3px',
     position: 'absolute',
     top: '$3',
+    transition: 'all cubic-bezier(0, 0, 0.2, 1) 700ms',
+    transform: 'scale(0.85)',
   },
 
   '&:after': {
@@ -50,13 +52,15 @@ export const Anchor = styled(Clickable, {
   },
 
   '&:before': {
-    ml: '-$8',
+    ml: '-$7',
   },
 
   '&:hover': {
     color: '$interactive-hover',
 
     '&:before, &:after': {
+      h: '1px',
+      bg: '$action-primary-subdued',
       transform: 'scale(1.25)',
       transition: 'all cubic-bezier(0, 0, 0.2, 1) 700ms',
       animationDirection: 'alternate-reverse',

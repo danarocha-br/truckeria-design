@@ -1,6 +1,8 @@
+import { CSS } from '@stitches/react';
 import * as React from 'react';
 
 import * as S from './styles';
+import { config } from '../../stitches.config';
 
 export type LinkProps = {
   /** to render a wrapper to the a tag */
@@ -11,6 +13,7 @@ export type LinkProps = {
   ariaLabel?: string;
   className?: string;
   variant?: 'standalone' | 'inline';
+  css?: CSS<typeof config>;
 };
 
 export const Link = ({
@@ -20,6 +23,8 @@ export const Link = ({
   ariaLabel,
   className,
   variant = 'standalone',
+  css,
+  ...props
 }: LinkProps) => {
   const Component = as || React.Fragment;
 
@@ -30,6 +35,8 @@ export const Link = ({
           as="a"
           className={className}
           aria-label={ariaLabel ? ariaLabel : label}
+          css={css}
+          {...props}
         >
           {label}
         </S.Anchor>
@@ -38,6 +45,8 @@ export const Link = ({
           as="a"
           className={className}
           aria-label={ariaLabel ? ariaLabel : label}
+          css={css}
+          {...props}
         >
           {label}
         </S.AnchorInline>
