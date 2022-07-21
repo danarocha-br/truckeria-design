@@ -1,7 +1,9 @@
 name: size
 
 on:
-[pull_request]
+ pull_request:
+    branches: '*'
+
 jobs:
   size:
     runs-on: ubuntu-latest
