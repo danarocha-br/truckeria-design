@@ -1,11 +1,7 @@
 name: size
 
 on:
-  push:
-      branches: [ master ]
-  pull_request:
-      branches: '*'
-
+[pull_request]
 jobs:
   size:
     runs-on: ubuntu-latest
