@@ -27,7 +27,7 @@ const Template: Story<CalloutProps> = args => (
   <Callout {...args}>
     <Text>
       I have no news. Which is good!{' '}
-      <Link href="/" label="And here is a link." variant='inline' />
+      <Link href="/" label="And here is a link." variant="inline" />
     </Text>
   </Callout>
 );

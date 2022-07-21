@@ -85,15 +85,15 @@ export const Toast = styled(Root, {
       warning: {
         bg: '$surface-warning-disabled',
         [`.${lightTheme} &`]: {
-          bg: '$surface-warning-default'
-        }
+          bg: '$surface-warning-default',
+        },
       },
 
       success: {
         bg: '$surface-success-pressed',
         [`.${lightTheme} &`]: {
-          bg: '$surface-success-hover'
-        }
+          bg: '$surface-success-hover',
+        },
       },
 
       danger: {
@@ -121,8 +121,8 @@ export const ToastTitle = styled(Title, {
       neutral: {
         color: '$text-onInteractive',
         [`.${lightTheme} &`]: {
-          color: '$text-contrast'
-        }
+          color: '$text-contrast',
+        },
       },
 
       info: {
@@ -161,8 +161,8 @@ export const ToastDescription = styled(Description, {
       neutral: {
         color: '$text-onInteractive',
         [`.${lightTheme} &`]: {
-          color: '$text-contrast'
-        }
+          color: '$text-contrast',
+        },
       },
 
       info: {

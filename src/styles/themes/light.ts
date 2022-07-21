@@ -94,5 +94,5 @@ export default {
   'text-success': colors.green[500],
   'text-onBrand': darken(0.28, colors.yellow[300]),
   'text-onInteractive': colors.white,
-  'text-contrast': colors.neutral[900]
+  'text-contrast': colors.neutral[900],
 };
