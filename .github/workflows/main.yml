@@ -1,23 +1,11 @@
 name: CI
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: '*'
+
 jobs:
-  quality:
-
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
-        os: [ubuntu-latest, windows-latest]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn ci
-    - run: yarn test
 
   build:
     name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
@@ -50,14 +38,13 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/master' }}
-    needs: [quality]
+    needs: [build]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn ci
     - run: yarn run semantic-release
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
