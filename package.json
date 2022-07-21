@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "0.0.0-development",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -107,5 +107,9 @@
     "commitizen": {
       "path": "./node_modules/commitizen-emoji"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danarocha-br/truckeria-design.git"
   }
 }

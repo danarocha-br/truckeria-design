@@ -32,6 +32,7 @@ export default {
     0.17,
     desaturate(0.35, colors.red[500])
   ),
+  'surface-danger-transparent': transparentize(0.5, colors.red[300]),
 
   'surface-warning-default': colors.yellow[500],
   'surface-warning-subdued': colors.yellow[100],

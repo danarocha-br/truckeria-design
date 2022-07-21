@@ -28,12 +28,14 @@ export default {
   'surface-danger-hover': darken(0.1, colors.red[500]),
   'surface-danger-pressed': darken(0.2, colors.red[500]),
   'surface-danger-disabled': desaturate(0.35, colors.red[500]),
+  'surface-danger-transparent': transparentize(0.6, colors.red[300]),
 
   'surface-warning-default': colors.yellow[500],
   'surface-warning-subdued': colors.yellow[100],
   'surface-warning-hover': darken(0.1, colors.yellow[500]),
   'surface-warning-pressed': darken(0.2, colors.yellow[500]),
   'surface-warning-disabled': desaturate(0.5, colors.yellow[500]),
+  'surface-warning-transparent': transparentize(0.8, colors.yellow[300]),
 
   'surface-info-default': colors.blue[500],
   'surface-info-subdued': colors.blue[100],
