@@ -4,7 +4,6 @@ import * as S from './styles';
 
 type StepItem = {
   label: string;
-  to: string;
   isActive?: boolean;
   isCompleted?: boolean;
 };

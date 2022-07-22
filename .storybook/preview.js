@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { withDesign } from 'storybook-addon-designs';
-import { themes } from '@storybook/theming';
+import { color, themes } from '@storybook/theming';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { TabContainer } from 'storybook-addon-docs-tabs';
 
 import 'styles/reset.css';
 import { lightTheme, darkTheme } from '../src/stitches.config';
+import { colors } from '../src/styles/tokens';
 
 addDecorator(withDesign());
 
@@ -48,11 +49,11 @@ export const parameters = {
     values: [
       {
         name: 'light',
-        value: '#fff',
+        value: colors.white,
       },
       {
         name: 'dark',
-        value: '#20242A',
+        value:  colors.neutral[900],
       },
     ],
   },

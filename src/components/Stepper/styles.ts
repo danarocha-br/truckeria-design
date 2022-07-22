@@ -8,35 +8,36 @@ export const List = styled('ol', {
   d: 'flex',
   alignItems: 'center',
   justify: 'space-between',
+  w: '$full',
 
-  '&:hover': {
-    '& li:not(:hover) span': {
-      opacity: 0,
-    },
+  '&:hover li:not(:hover) span': {
+    opacity: 0,
   },
 });
 
 export const Item = styled('li', {
+  color: '$text-lighter',
   textAlign: 'center',
   position: 'relative',
   whiteSpace: 'nowrap',
   minWidth: 0,
-  borderBottom: '2px solid $surface-base-default',
-  pb: '$3',
+  borderBottom: '3px solid $surface-base-default',
+  pb: '$6',
   overflow: 'visible',
+  listStyle: 'none',
   flex: 2,
 
   '&:before': {
     content: '',
     bg: '$surface-base-subdued',
     d: 'block',
-    w: '$4',
-    h: '$4',
+    w: 18,
+    h: 18,
     borderRadius: '$round',
-    border: '2px solid',
+    border: '3px solid',
     borderColor: '$background-default',
     position: 'absolute',
-    bottom: '$-2',
+    bottom: -9,
     left: 'calc(50% - 6px)',
     zIndex: 3,
     transitionPoperty: 'all',
@@ -48,11 +49,11 @@ export const Item = styled('li', {
     flex: 1,
   },
 
-  '&:firt-child': {
+  '&:first-child': {
     textAlign: 'left',
 
     '&:before': {
-      left: '$-1',
+      left: -1,
     },
   },
 
@@ -77,11 +78,12 @@ export const Item = styled('li', {
 
   '&:not(:first-child):after': {},
 
-  '&:hover:before': {
-    transform: 'scale(1.33)',
-
+  '&:hover': {
+    '&:before': {
+      transform: 'scale(1.2)',
+    },
     '& span': {
-      opacity: 1,
+      opacity: 0.5,
     },
   },
 
@@ -108,8 +110,8 @@ export const Item = styled('li', {
           w: '$full',
           position: 'absolute',
           left: '-50%',
-          bottom: '2px',
-          borderBottom: '2px solid $action-success-default',
+          bottom: '-2px',
+          borderBottom: '3px solid $action-success-default',
         },
 
         '&:hover:before': {

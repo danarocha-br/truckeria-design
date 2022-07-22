@@ -1,9 +1,9 @@
 import React from 'react';
+import { CSS } from '@stitches/react';
 
 import { iconPath, Icon } from '../Icon';
 import { Flex } from '../Flex';
 import * as S from './styles';
-import { CSS } from '@stitches/react';
 
 export type CalloutProps = {
   title?: string;

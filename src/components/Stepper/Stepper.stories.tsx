@@ -6,17 +6,15 @@ import { Box } from '../Box';
 
 const steps = [
   {
-    label: 'Basic info',
-    to: '/',
+    label: 'Your info',
+    isCompleted: true,
   },
   {
-    label: 'Contact info',
-    to: '/',
+    label: 'Food truck info',
     isActive: true,
   },
   {
-    label: 'Some other info',
-    to: '/',
+    label: 'Contact info',
   },
 ];
 
@@ -37,7 +35,7 @@ export default {
 } as Meta;
 
 const Template: Story<StepperProps> = args => (
-  <Box css={{ w: 400 }}>
+  <Box css={{ w: 500 }}>
     <Stepper {...args} />
   </Box>
 );
