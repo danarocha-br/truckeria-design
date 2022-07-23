@@ -13,22 +13,26 @@ export type StepperProps = {
   activeIndex?: number;
 };
 
-export const Stepper = ({ steps, activeIndex }: StepperProps) => (
-  <S.Container>
-    <S.List>
-      {steps &&
-        steps.map((item: StepperItemProps, index: number) => (
-          <S.Item
-            key={index}
-            isActive={item.isActive || (activeIndex && activeIndex === index)}
-            isCompleted={
-              item.isCompleted || (activeIndex && activeIndex > index)
-            }
-            aria-label={item.label}
-          >
-            <span> {item.label}</span>
-          </S.Item>
-        ))}
-    </S.List>
-  </S.Container>
-);
+export const Stepper = ({ steps, activeIndex }: StepperProps) => {
+  return (
+    <S.Container>
+      <S.List>
+        {steps &&
+          steps.map((item: StepperItemProps, index: number) => (
+            <S.Item
+              key={index}
+              isActive={item.isActive || activeIndex === index}
+              isCompleted={
+                //@ts-ignore
+                item.isCompleted || activeIndex > index
+              }
+              aria-label={item.label}
+            >
+              {console.log(index)}
+              <span> {item.label}</span>
+            </S.Item>
+          ))}
+      </S.List>
+    </S.Container>
+  );
+};

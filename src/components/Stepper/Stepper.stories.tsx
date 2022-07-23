@@ -7,11 +7,11 @@ import { Box } from '../Box';
 const steps = [
   {
     label: 'Your info',
-    isCompleted: true,
+    // isCompleted: true,
   },
   {
     label: 'Food truck info',
-    isActive: true,
+    // isActive: true,
   },
   {
     label: 'Contact info',
@@ -31,6 +31,7 @@ export default {
   },
   args: {
     steps: steps,
+    activeIndex: 0,
   },
 } as Meta;
 
