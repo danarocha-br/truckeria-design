@@ -9,6 +9,7 @@ export const List = styled('ol', {
   alignItems: 'center',
   justify: 'space-between',
   w: '$full',
+  p: 0,
 
   '&:hover li:not(:hover) span': {
     opacity: 0,

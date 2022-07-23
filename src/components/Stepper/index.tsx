@@ -2,21 +2,21 @@ import React from 'react';
 
 import * as S from './styles';
 
-type StepItem = {
+export type StepperItemProps = {
   label: string;
   isActive?: boolean;
   isCompleted?: boolean;
 };
 
 export type StepperProps = {
-  steps: StepItem[];
+  steps: StepperItemProps[];
 };
 
 export const Stepper = ({ steps }: StepperProps) => (
   <S.Container>
     <S.List>
       {steps &&
-        steps.map((item: StepItem, index: number) => (
+        steps.map((item: StepperItemProps, index: number) => (
           <S.Item
             key={index}
             isActive={item.isActive}
