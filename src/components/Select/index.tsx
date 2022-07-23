@@ -1,3 +1,4 @@
+//@ts-noCheck
 import React, { forwardRef, useCallback, useState } from 'react';
 import { CSS } from '@stitches/react';
 import makeAnimated from 'react-select/animated';
