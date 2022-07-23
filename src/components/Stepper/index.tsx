@@ -28,7 +28,6 @@ export const Stepper = ({ steps, activeIndex }: StepperProps) => {
               }
               aria-label={item.label}
             >
-              {console.log(index)}
               <span> {item.label}</span>
             </S.Item>
           ))}
