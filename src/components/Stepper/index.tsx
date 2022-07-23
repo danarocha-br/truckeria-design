@@ -10,17 +10,20 @@ export type StepperItemProps = {
 
 export type StepperProps = {
   steps: StepperItemProps[];
+  activeIndex?: number;
 };
 
-export const Stepper = ({ steps }: StepperProps) => (
+export const Stepper = ({ steps, activeIndex }: StepperProps) => (
   <S.Container>
     <S.List>
       {steps &&
         steps.map((item: StepperItemProps, index: number) => (
           <S.Item
             key={index}
-            isActive={item.isActive}
-            isCompleted={item.isCompleted}
+            isActive={item.isActive || (activeIndex && activeIndex === index)}
+            isCompleted={
+              item.isCompleted || (activeIndex && activeIndex > index)
+            }
             aria-label={item.label}
           >
             <span> {item.label}</span>
