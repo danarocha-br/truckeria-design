@@ -8,7 +8,7 @@ export type TagProps = {
   isEmpty?: boolean;
 };
 
-export const Tag = ({ label, loading = false, isEmpty = false }: TagProps) => (
+export const Tag = ({ label, isEmpty = false }: TagProps) => (
   <>
     <S.Container aria-label={label} isEmpty={isEmpty}>
       {isEmpty ? <S.Rect /> : label}
