@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { InputHTMLAttributes, useCallback, useState, forwardRef } from 'react';
+import { CSS } from '@stitches/react';
 
 import { Flex } from '../Flex';
 import { iconPath, Icon } from '../Icon';
@@ -7,6 +8,8 @@ import { iconPath, Icon } from '../Icon';
 import * as S from './styles';
 import { Spinner } from '../Spinner';
 import { FormError } from '../FormError';
+import { config } from '../../stitches.config';
+import { Box } from '../Box';
 
 export type TextInputProps = {
   name: string;
@@ -19,6 +22,7 @@ export type TextInputProps = {
   hasValue?: boolean;
   icon?: keyof typeof iconPath;
   errors?: any | undefined;
+  css?: CSS<typeof config>;
 } & InputHTMLAttributes<HTMLInputElement>;
 
 type Ref = HTMLInputElement | null;
@@ -26,7 +30,6 @@ type Ref = HTMLInputElement | null;
 export const TextInput = forwardRef<Ref, TextInputProps>(
   (
     {
-      id,
       name,
       icon,
       defaultValue,
@@ -84,22 +87,28 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
           />
 
           <S.Label
-            htmlFor={id}
+            aria-labelledby={label}
+            htmlFor={name}
             isDisabled={disabled || loading}
             hasValue={hasValue}
             hasPlaceholder={!!placeholder}
+            hasIcon={!!icon}
           >
             {!!icon && <Icon className="c-input__icon" name={icon} />}
             <span className="c-input__label">{label}</span>
 
             {!!errors && !areErrorsEmpty && (
-              <Icon name="alert" className="c-input__error-icon" />
+              <Icon
+                name="alert"
+                className="c-input__error-icon"
+                css={{ position: 'absolute', right: '$4' }}
+              />
             )}
 
             {loading && (
-              <i>
+              <Box css={{ position: 'absolute', right: '$4' }}>
                 <Spinner size="xs" />
-              </i>
+              </Box>
             )}
           </S.Label>
         </S.Container>

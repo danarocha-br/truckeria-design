@@ -96,7 +96,7 @@ const Template: Story<TextInputProps> = args => {
   const [inputValue, setInputValue] = useState('');
 
   return (
-    <Flex direction="column" gap={6} css={{ w: 360 }}>
+    <Flex direction="column" gap={6} css={{ w: 400 }}>
       <TextInput
         {...args}
         hasValue={!!inputValue}

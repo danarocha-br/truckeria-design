@@ -1,5 +1,5 @@
-import { CSS } from '@stitches/react';
 import * as React from 'react';
+import { CSS } from '@stitches/react';
 
 import * as S from './styles';
 import { config } from '../../stitches.config';
