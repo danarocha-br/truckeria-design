@@ -17,16 +17,16 @@ const hasValueState = {
     borderColor: '$form-subdued',
   },
 
-  '&  label > .c-input__label': {
-    transform: 'translate3d(-54px, -26px, 0) scale3d(0.8, 0.8, 1)',
+  '& label > .c-input__label': {
+    transform: 'translate3d(-46px, -26px, 0) scale3d(0.8, 0.8, 1)',
   },
 
-  '&  label > svg.c-input__icon': {
+  '& label > svg.c-input__icon': {
     ...animateIcon,
     transform: 'translate3d(-0.4em, -25px, 0) scale3d(0.85, 0.85, 1)',
     color: '$form-focus',
   },
-  '&  label > svg.c-input__error-icon': {
+  '& label > svg.c-input__error-icon': {
     ...animateIcon,
     transform: 'translate3d(6px, -25px, 0) scale3d(0.85, 0.85, 1)',
     color: '$form-focus',
@@ -119,7 +119,7 @@ export const Container = styled('div', {
       },
     },
     hasValue: {
-      true: {},
+      true: { ...hasValueState },
     },
   },
 
@@ -242,7 +242,7 @@ export const selectInputStyles = {
 
     '&__value-container--is-multi': {
       flexWrap: 'nowrap',
-      gap: '4px'
+      gap: '4px',
     },
 
     variants: {
@@ -261,7 +261,7 @@ export const selectInputStyles = {
         true: {
           ...hasValueState,
 
-          '& + label > svg.c-input__icon': {
+          '& label > svg.c-input__icon': {
             ...animateIcon,
             color: '$text-default',
             transform: 'translate3d(-0.6em, -1.5em, 0) scale3d(0.85, 0.85, 1)',
