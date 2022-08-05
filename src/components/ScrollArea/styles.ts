@@ -7,7 +7,6 @@ const SCROLLBAR_SIZE = 10;
 export const ScrollAreaRoot = styled(ScrollAreaPrimitive.Root, {
   width: '$full',
   height: '$full',
-  borderRadius: '$xs',
   overflow: 'hidden',
 });
 
@@ -23,9 +22,9 @@ export const Scrollbar = styled(ScrollAreaPrimitive.Scrollbar, {
   // disable browser handling of all panning and zooming gestures on touch devices
   touchAction: 'none',
   padding: 2,
-  background: '$background-subdued',
+  background: '$transparent',
   transition: 'background 160ms ease-out',
-  '&:hover': { background: '$loading-default' },
+  '&:hover': { background: '$background-subdued' },
   '&[data-orientation="vertical"]': { width: SCROLLBAR_SIZE },
   '&[data-orientation="horizontal"]': {
     flexDirection: 'column',
