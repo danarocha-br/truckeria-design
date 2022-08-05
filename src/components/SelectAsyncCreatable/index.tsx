@@ -28,7 +28,7 @@ import { config } from '../../stitches.config';
 
 export type SelectAsyncCreatableProps = {
   label?: string;
-  id: string;
+  id?: string;
   name: string;
   isMulti?: boolean;
   isClearable?: boolean;
@@ -160,7 +160,7 @@ export const SelectAsyncCreatable = forwardRef<Ref, SelectAsyncCreatableProps>(
           isDisabled={disabled}
           isLoading={loading}
           readOnly={readOnly}
-          hasValue={hasValue}
+          hasValue={hasValue || !!placeholder}
         >
           <S.SelectInput
             classNamePrefix="c-select"

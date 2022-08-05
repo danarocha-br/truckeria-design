@@ -23,7 +23,7 @@ import { config } from '../../stitches.config';
 
 export type SelectProps = {
   label?: string;
-  id: string;
+  id?: string;
   name: string;
   isMulti?: boolean;
   isClearable?: boolean;
@@ -153,7 +153,7 @@ export const Select = forwardRef<Ref, SelectProps>(
           isDisabled={disabled}
           isLoading={loading}
           readOnly={readOnly}
-          hasValue={hasValue}
+          hasValue={hasValue || !!placeholder}
         >
           <S.SelectInput
             classNamePrefix="c-select"
@@ -185,7 +185,7 @@ export const Select = forwardRef<Ref, SelectProps>(
             aria-labelledby={label}
             htmlFor={name}
             isDisabled={disabled || loading}
-            hasValue={hasValue}
+            hasValue={hasValue || !!placeholder}
             hasFocus={hasFocus}
             hasIcon={!!icon}
             hasPlaceholder={!!placeholder}

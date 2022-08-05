@@ -1,17 +1,19 @@
 import * as React from 'react';
 import { InputHTMLAttributes, useCallback, useState, forwardRef } from 'react';
 import { CSS } from '@stitches/react';
+import { NumberFormatProps } from 'react-number-format';
 
 import { Flex } from '../Flex';
 import { iconPath, Icon } from '../Icon';
 import { Spinner } from '../Spinner';
 import { FormError } from '../FormError';
 import { Box } from '../Box';
+import * as TextInput from '../TextInput/styles';
 import * as S from './styles';
 
 import { config } from '../../stitches.config';
 
-export type TextInputProps = {
+export type NumberInputProps = {
   name: string;
   defaultValue?: string;
   label?: string;
@@ -23,11 +25,12 @@ export type TextInputProps = {
   icon?: keyof typeof iconPath;
   errors?: any | undefined;
   css?: CSS<typeof config>;
-} & InputHTMLAttributes<HTMLInputElement>;
+} & InputHTMLAttributes<HTMLInputElement> &
+  NumberFormatProps;
 
 type Ref = HTMLInputElement | null;
 
-export const TextInput = forwardRef<Ref, TextInputProps>(
+export const NumberInput = forwardRef<Ref, NumberInputProps>(
   (
     {
       name,
@@ -39,6 +42,9 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
       loading = false,
       readOnly = false,
       hasValue = false,
+      onValueChange,
+      allowNegative,
+      decimalScale,
       errors,
       ...props
     },
@@ -64,7 +70,7 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
 
     return (
       <Flex direction="column" fullWidth>
-        <S.Container
+        <TextInput.Container
           hasError={!!errors && !areErrorsEmpty ? true : false}
           isDisabled={disabled}
           isLoading={loading}
@@ -79,14 +85,19 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
             hasFocus={hasFocus}
             hasError={!!errors && !areErrorsEmpty ? true : false}
             name={name}
+            thousandsGroupStyle="thousand"
+            allowNegative={allowNegative}
+            decimalScale={decimalScale}
+            onValueChange={onValueChange}
             {...props}
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
             disabled={disabled || loading}
             readOnly={readOnly}
+            inputMode="numeric"
           />
 
-          <S.Label
+          <TextInput.Label
             aria-labelledby={label}
             htmlFor={name}
             isDisabled={disabled || loading}
@@ -110,8 +121,8 @@ export const TextInput = forwardRef<Ref, TextInputProps>(
                 <Spinner size="xs" />
               </Box>
             )}
-          </S.Label>
-        </S.Container>
+          </TextInput.Label>
+        </TextInput.Container>
 
         {!!errors && !areErrorsEmpty ? (
           <FormError message={errors.message} />
