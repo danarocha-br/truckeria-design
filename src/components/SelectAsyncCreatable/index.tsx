@@ -32,7 +32,7 @@ export type SelectAsyncCreatableProps = {
   name: string;
   isMulti?: boolean;
   isClearable?: boolean;
-  options: OptionsOrGroups<string, GroupBase<string>> | undefined;
+  defaultOptions: OptionsOrGroups<string, GroupBase<string>> | undefined;
   defaultValue?: string;
   disabled?: boolean;
   loading?: boolean;
@@ -60,7 +60,7 @@ export const SelectAsyncCreatable = forwardRef<Ref, SelectAsyncCreatableProps>(
       readOnly = false,
       hasValue = false,
       errors,
-      options,
+      defaultOptions,
       isClearable = true,
       isMulti = false,
       css,
@@ -178,11 +178,11 @@ export const SelectAsyncCreatable = forwardRef<Ref, SelectAsyncCreatableProps>(
             isClearable={isClearable}
             isDisabled={disabled || loading}
             isLoading={loading}
-            options={options}
             hasPlaceholder={!!placeholder}
             hasFocus={hasFocus}
             hasError={!!errors && !areErrorsEmpty ? true : false}
             readOnly={readOnly}
+            defaultOptions={defaultOptions}
             {...props}
             defaultValue={defaultValue}
             onFocus={handleInputFocus}

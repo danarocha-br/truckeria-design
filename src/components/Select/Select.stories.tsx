@@ -53,7 +53,7 @@ const Template: Story<SelectProps> = args => {
   } = useController({ name: 'food', control, defaultValue: '' });
 
   return (
-    <Box css={{ w: 500 }}>
+    <Box css={{ w: 300 }}>
       <Select
         {...args}
         {...field}

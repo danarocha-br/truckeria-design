@@ -48,8 +48,8 @@ export const Container = styled('div', {
 
   w: '$full',
   minWidth: '15rem',
-  minHeight: '5rem',
-  h: '$11',
+  minHeight: '$11',
+  height: 'auto',
 
   transition: 'all cubic-bezier(0.4, 0, 0.2, 1) 150ms',
 
@@ -240,6 +240,11 @@ export const selectInputStyles = {
       },
     },
 
+    '&__value-container--is-multi': {
+      flexWrap: 'nowrap',
+      gap: '4px'
+    },
+
     variants: {
       hasFocus: {
         true: {
@@ -302,7 +307,8 @@ export const Label = styled('label', {
   d: 'flex',
   alignItems: 'center',
   w: '$full',
-  h: '$full',
+  minHeight: '$11',
+  height: 'auto',
 
   '-webkitTouchCallout': 'none',
   userSelect: 'none',
