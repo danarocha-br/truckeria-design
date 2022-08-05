@@ -10,6 +10,7 @@ export * from './components/FormControl';
 export * from './components/FormError';
 export * from './components/Link';
 export * from './components/Logo';
+export * from './components/ScrollArea';
 export * from './components/Select';
 export * from './components/SelectAsyncCreatable';
 export * from './components/Spinner';

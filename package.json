@@ -97,6 +97,7 @@
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.1.1",
+    "@radix-ui/react-scroll-area": "^1.0.0",
     "@radix-ui/react-toast": "^0.1.1",
     "@stitches/react": "^1.2.8",
     "docz": "^2.4.0",
